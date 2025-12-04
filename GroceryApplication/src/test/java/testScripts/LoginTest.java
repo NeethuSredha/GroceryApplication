@@ -44,6 +44,9 @@ public class LoginTest extends Base {
 		loginPage.enterUserNameOnUserNameField(userName);
 		loginPage.enterPasswordOnPasswordField(password);
 		loginPage.signInButtonClick();
+		String expected="Sign in to start your session";
+		String actual=loginPage.getTheLoginBoxMessage();
+		Assert.assertEquals(actual,expected,"user was able to login with invalid username.");
 	}
 
 	@Test
@@ -54,5 +57,12 @@ public class LoginTest extends Base {
 		loginPage.enterUserNameOnUserNameField(userName);
 		loginPage.enterPasswordOnPasswordField(password);
 		loginPage.signInButtonClick();
+		boolean loginFormDisplayed=loginPage.isLoginFormDisplayed();
+		Assert.assertTrue(loginFormDisplayed,"user was able to login with invalid username and password.");
+		//String actual=loginPage.getTheLoginBoxMessage();
+		//boolean verifyTitle=actual.equalsIgnoreCase("Sign in to start your session in the app.");
+		//Assert.assertFalse(verifyTitle, "user was able to login with invalid username  and password.");
 	}
+	
+	
 }

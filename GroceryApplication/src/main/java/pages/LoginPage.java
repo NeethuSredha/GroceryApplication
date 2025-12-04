@@ -17,6 +17,8 @@ public class LoginPage {
 	@FindBy(xpath="//button[text()='Sign In']") WebElement signIn;
 	@FindBy(xpath="//p[text()='Dashboard']") WebElement dashboard;
 	@FindBy(xpath="//b[text()='7rmart supermarket']") WebElement title;
+	@FindBy(xpath="//p[text()='Sign in to start your session']") WebElement loginBoxMessage;
+	@FindBy(id="login-form") WebElement loginForm;
 	
 	
 	
@@ -39,4 +41,13 @@ public class LoginPage {
 	public String getTheTitle() {
 		return title.getText();
 	}
+	
+	public String getTheLoginBoxMessage() {
+		return loginBoxMessage.getText();
+	}
+	
+	public boolean isLoginFormDisplayed() {
+		return loginForm.isDisplayed();
+	}
+	
 }
