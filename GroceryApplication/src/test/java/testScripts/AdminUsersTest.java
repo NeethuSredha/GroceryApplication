@@ -10,6 +10,7 @@ import pages.AdminUsersPage;
 import pages.HomePage;
 import pages.LoginPage;
 import utilities.ExcelUtility;
+import utilities.FakerUtility;
 
 public class AdminUsersTest extends Base {
 	@Test
@@ -21,11 +22,12 @@ public class AdminUsersTest extends Base {
 		loginPage.enterPasswordOnPasswordField(password);
 		loginPage.signInButtonClick();
 		HomePage homePage = new HomePage(driver);
-		homePage.clickOnMoreInfoLink();
+		homePage.clickOnMoreInfoAdminUsersLink();
 		AdminUsersPage adminUsersPage = new AdminUsersPage(driver);
 		adminUsersPage.clickOnNewButton();
-		String newUsername = ExcelUtility.getStringData(0, 0, "AdminUsersPage");
-		String newPassword = ExcelUtility.getStringData(0, 1, "AdminUsersPage");
+		FakerUtility fakerUtility=new FakerUtility();
+		String newUsername = fakerUtility.createRandomUsername();
+		String newPassword = fakerUtility.createFakePassword();
 		String userType = ExcelUtility.getStringData(0, 2, "AdminUsersPage");
 		adminUsersPage.enterUserNameOnUserNameField(newUsername);
 		adminUsersPage.enterPasswordOnPasswordField(newPassword);
@@ -45,7 +47,7 @@ public class AdminUsersTest extends Base {
 		loginPage.enterPasswordOnPasswordField(password);
 		loginPage.signInButtonClick();
 		HomePage homePage = new HomePage(driver);
-		homePage.clickOnMoreInfoLink();
+		homePage.clickOnMoreInfoAdminUsersLink();
 		AdminUsersPage adminUsersPage = new AdminUsersPage(driver);
 		adminUsersPage.searchButtonClick();
 		String newUsername = ExcelUtility.getStringData(0, 0, "AdminUsersPage");
@@ -64,7 +66,7 @@ public class AdminUsersTest extends Base {
 		loginPage.enterPasswordOnPasswordField(password);
 		loginPage.signInButtonClick();
 		HomePage homePage = new HomePage(driver);
-		homePage.clickOnMoreInfoLink();
+		homePage.clickOnMoreInfoAdminUsersLink();
 		AdminUsersPage adminUsersPage = new AdminUsersPage(driver);
 		adminUsersPage.resetButtonClick();
 		boolean adminUsersListDisplayed=adminUsersPage.isAdminUsersListDisplayed();

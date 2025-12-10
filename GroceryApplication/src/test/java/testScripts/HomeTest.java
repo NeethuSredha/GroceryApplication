@@ -9,9 +9,9 @@ import pages.HomePage;
 import utilities.ExcelUtility;
 
 public class HomeTest extends Base {
-	@Test
+	@Test(retryAnalyzer = retry.Retry.class)
 	public void verifyWhetherUserIsAbleToLogOutSuccessfully() throws IOException {
-		String userName = ExcelUtility.getStringData(0, 0, "LoginPage");
+		String userName = ExcelUtility.getStringData(10, 0, "LoginPage");
 		String password = ExcelUtility.getStringData(0, 1, "LoginPage");
 		LoginPage loginPage = new LoginPage(driver);
 		loginPage.enterUserNameOnUserNameField(userName);

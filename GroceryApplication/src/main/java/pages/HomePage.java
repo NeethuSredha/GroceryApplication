@@ -16,7 +16,8 @@ public class HomePage {
 
 	@FindBy(xpath = "//img[contains(@src,'avatar5.png')]") WebElement admin;
 	@FindBy(linkText = "Logout") WebElement logoutButton;
-	@FindBy(xpath="//p[text()='Admin Users']/parent::div//following-sibling::a") WebElement moreInfoAdminLink;
+	@FindBy(xpath="//p[text()='Admin Users']/parent::div//following-sibling::a") WebElement moreInfoAdminUsersLink;
+	@FindBy(xpath="//p[text()='Manage News']/parent::div//following-sibling::a") WebElement moreInfoManageNewsLink;
 
 	
 	public void clickOnAdminIcon() {
@@ -28,7 +29,11 @@ public class HomePage {
 		logoutButton.click();
 	}
 	
-	public void clickOnMoreInfoLink() {
-		moreInfoAdminLink.click();
+	public void clickOnMoreInfoAdminUsersLink() {
+		moreInfoAdminUsersLink.click();
+	}
+	
+	public void clickOnMoreInfoManageNewsLink() {
+		moreInfoManageNewsLink.click();
 	}
 }
