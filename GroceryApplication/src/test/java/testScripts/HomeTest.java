@@ -9,7 +9,7 @@ import pages.HomePage;
 import utilities.ExcelUtility;
 
 public class HomeTest extends Base {
-	@Test(retryAnalyzer = retry.Retry.class)
+	@Test(description="verify user logs out successfull.",retryAnalyzer = retry.Retry.class)
 	public void verifyWhetherUserIsAbleToLogOutSuccessfully() throws IOException {
 		String userName = ExcelUtility.getStringData(10, 0, "LoginPage");
 		String password = ExcelUtility.getStringData(0, 1, "LoginPage");

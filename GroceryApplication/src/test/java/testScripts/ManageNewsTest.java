@@ -12,7 +12,7 @@ import pages.ManageNewsPage;
 import utilities.ExcelUtility;
 
 public class ManageNewsTest extends Base {
-	@Test
+	@Test(description = "verify whether new news can be created.")
 	public void verifyWhetherNewNewsCanBeCreated() throws IOException {
 		String username = ExcelUtility.getStringData(0, 0, "loginPage");
 		String password = ExcelUtility.getStringData(0, 1, "loginPage");
@@ -32,7 +32,7 @@ public class ManageNewsTest extends Base {
 
 	}
 
-	@Test
+	@Test(description = "verify whether news can be searched.")
 	public void verifyWhetherNewsCanBeSearched() throws IOException {
 		String username = ExcelUtility.getStringData(0, 0, "loginPage");
 		String password = ExcelUtility.getStringData(0, 1, "loginPage");
@@ -52,7 +52,7 @@ public class ManageNewsTest extends Base {
 		Assert.assertEquals(actual, expected, "Unable to search the news.");
 	}
 
-	@Test
+	@Test(description = "verify whether news list can be reset.")
 	public void verifyWhetherTheListCanBeReset() throws IOException {
 		String username = ExcelUtility.getStringData(0, 0, "loginPage");
 		String password = ExcelUtility.getStringData(0, 1, "loginPage");

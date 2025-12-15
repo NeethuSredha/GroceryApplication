@@ -19,7 +19,7 @@ import utilities.ScreenshotUtility;
 public class Base {
 	public WebDriver driver;
 
-	@BeforeMethod
+	@BeforeMethod(alwaysRun=true)
 	@Parameters("browsers")
 	public void initializeBrowser(String browsers) throws Exception {
 		if(browsers.equalsIgnoreCase("Chrome")) {
@@ -38,7 +38,7 @@ public class Base {
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 	}
-	@AfterMethod
+	@AfterMethod(alwaysRun=true)
 	public void driverQuit(ITestResult iTestResult) throws IOException {
 
 		if (iTestResult.getStatus() == ITestResult.FAILURE) {
