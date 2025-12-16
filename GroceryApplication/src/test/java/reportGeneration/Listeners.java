@@ -12,13 +12,13 @@ import com.aventstack.extentreports.Status;
 import automationCore.Base;
 import utilities.ExtentReportUtility;
 
-public class Listeners extends Base implements ITestListener{
+public class Listeners extends Base implements ITestListener{ //ITestListener interface :listener for test running. methods in this interface are overridden in the below methods.
 
 	ExtentTest test;
 	ExtentReports extent = ExtentReportUtility.createExtentReports();
 	ThreadLocal<ExtentTest> extentTest = new ThreadLocal<ExtentTest>();
 
-	public void onTestStart(ITestResult result) {
+	public void onTestStart(ITestResult result) {//executes before test execution.
 
 	ITestListener.super.onTestStart(result);
 	test = extent.createTest(result.getMethod().getMethodName());
@@ -95,6 +95,6 @@ public class Listeners extends Base implements ITestListener{
 	public void onFinish(ITestContext context) {
 
 	ITestListener.super.onFinish(context);
-	extent.flush();
+	extent.flush(); //To have the above mentioned steps to work, flush method needs to be invoked.
 	}
 }

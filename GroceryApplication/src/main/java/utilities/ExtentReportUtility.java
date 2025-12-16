@@ -3,6 +3,7 @@ package utilities;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 
+//The feature that selenium provides to generate reports.
 public class ExtentReportUtility {
 
 	public static final ExtentReports extentReports = new ExtentReports();// static instance of extentreports that can
