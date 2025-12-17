@@ -9,7 +9,7 @@
     <classes>
       <class name="testScripts.HomeTest">
         <methods>
-          <include name="verifyWhetherUserIsAbleToLogOutSuccessfully"/>
+          <include name="verifyWhetherUserIsAbleToLogOutSuccessfully" invocation-numbers="0"/>
           <include name="initializeBrowser"/>
           <include name="driverQuit"/>
         </methods>
