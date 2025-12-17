@@ -23,15 +23,18 @@ public class LoginPage {
 	
 	
 	
-	public void enterUserNameOnUserNameField(String userNameValue) {
+	public LoginPage enterUserNameOnUserNameField(String userNameValue) {
 		userName.sendKeys(userNameValue);
+		return this;
 	}
-	public void enterPasswordOnPasswordField(String passwordValue) {
+	public LoginPage enterPasswordOnPasswordField(String passwordValue) {
 		password.sendKeys(passwordValue);
+		return this;
 	}
 
-	public void signInButtonClick() {
+	public HomePage signInButtonClick() {
 		signIn.click();
+		return new HomePage(driver);
 	}
 	
 	public boolean isDashboardDisplayed() {

@@ -27,40 +27,49 @@ public class AdminUsersPage {
 	@FindBy(xpath="//h4[text()='Admin Users']") WebElement searchAdminUsersResultTab;
 	@FindBy(xpath="//h4[text()='Admin Users']//ancestor::div[@class='card']") WebElement adminUsersList;
 	
-	public void clickOnNewButton() {
+	public AdminUsersPage clickOnAdminNewButton() {
 		newLink.click();
+		return new AdminUsersPage(driver);
 	}
 	
-	public void enterUserNameOnUserNameField(String newUserNameValue) {
+	public AdminUsersPage enterUserNameOnUserNameFieldOnAdmin(String newUserNameValue) {
 		userName.sendKeys(newUserNameValue);
+		return new AdminUsersPage(driver);
 	}
 	
-	public void enterPasswordOnPasswordField(String newPasswordValue) {
+	public AdminUsersPage enterPasswordOnPasswordFieldOnAdmin(String newPasswordValue) {
 		password.sendKeys(newPasswordValue);
+		return new AdminUsersPage(driver);
 	}
 	
-	public void selectTheUserType(String userTypeValue) {
+	public AdminUsersPage selectTheUserTypeOnAdmin(String userTypeValue) {
 		Select select=new Select(userType);
 		select.selectByVisibleText(userTypeValue);
+		return new AdminUsersPage(driver);
 	}
-	public void saveButtonClick() {
+	public AdminUsersPage saveButtonClickOnAdmin() {
 		saveButton.click();
+		return new AdminUsersPage(driver);
 	}
 	
-	public void searchButtonClick() {
+	public AdminUsersPage searchButtonClickOnAdmin() {
 		searchLink.click();
+		return new AdminUsersPage(driver);
 	}
 	
-	public void enterTheUserNameToSearch(String userNameValue) {
+	public AdminUsersPage enterTheUserNameToSearchOnAdmin(String userNameValue) {
 		searchUserName.sendKeys(userNameValue);
+		return new AdminUsersPage(driver);
 	}
 	
-	public void searchButtonClickToCheckUserName() {
+	public AdminUsersPage searchButtonClickToCheckUserNameOnAdmin() {
 		searchButton.click();
+		return new AdminUsersPage(driver);
 	}
 	
-	public void resetButtonClick() {
+	public AdminUsersPage resetButtonClickOnAdmin() {
 		resetLink.click();
+		return new AdminUsersPage(driver);
 	}
 	
 	public boolean userAddedAlertMessage() {

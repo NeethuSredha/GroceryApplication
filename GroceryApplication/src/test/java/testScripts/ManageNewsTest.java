@@ -13,22 +13,22 @@ import pages.ManageNewsPage;
 import utilities.ExcelUtility;
 
 public class ManageNewsTest extends Base {
+	HomePage homePage;
+	ManageNewsPage manageNewsPage;
 	@Test(description = "verify whether new news can be created.")
 	public void verifyWhetherNewNewsCanBeCreated() throws IOException {
 		String username = ExcelUtility.getStringData(0, 0, "loginPage");
 		String password = ExcelUtility.getStringData(0, 1, "loginPage");
 		LoginPage loginPage = new LoginPage(driver);
-		loginPage.enterUserNameOnUserNameField(username);
-		loginPage.enterPasswordOnPasswordField(password);
-		loginPage.signInButtonClick();
-		HomePage homePage = new HomePage(driver);
-		homePage.clickOnMoreInfoManageNewsLink();
-		ManageNewsPage newsPage = new ManageNewsPage(driver);
-		newsPage.clickOnNewButton();
+		loginPage.enterUserNameOnUserNameField(username).enterPasswordOnPasswordField(password);
+		homePage=loginPage.signInButtonClick();
+		//HomePage homePage = new HomePage(driver);
+		manageNewsPage=homePage.clickOnMoreInfoManageNewsLink();
+		//ManageNewsPage newsPage = new ManageNewsPage(driver);
+		manageNewsPage.clickOnNewButtonOnManageNews();
 		String news = ExcelUtility.getStringData(0, 0, "ManageNewsPage");
-		newsPage.enterTheNewsInformation(news);
-		newsPage.clickOnSaveButton();
-		boolean newsCreatedAlert = newsPage.newsCreatedAlert();
+		manageNewsPage.enterTheNewsInformationOnManageNews(news).clickOnSaveButtonOnManageNews();
+		boolean newsCreatedAlert = manageNewsPage.newsCreatedAlert();
 		Assert.assertTrue(newsCreatedAlert, Constants.ADDNEWNEWSERROR);
 
 	}
@@ -38,18 +38,16 @@ public class ManageNewsTest extends Base {
 		String username = ExcelUtility.getStringData(0, 0, "loginPage");
 		String password = ExcelUtility.getStringData(0, 1, "loginPage");
 		LoginPage loginPage = new LoginPage(driver);
-		loginPage.enterUserNameOnUserNameField(username);
-		loginPage.enterPasswordOnPasswordField(password);
-		loginPage.signInButtonClick();
-		HomePage homePage = new HomePage(driver);
-		homePage.clickOnMoreInfoManageNewsLink();
-		ManageNewsPage newsPage = new ManageNewsPage(driver);
-		newsPage.clickOnSearchButton();
+		loginPage.enterUserNameOnUserNameField(username).enterPasswordOnPasswordField(password);
+		homePage=loginPage.signInButtonClick();
+		//HomePage homePage = new HomePage(driver);
+		manageNewsPage=homePage.clickOnMoreInfoManageNewsLink();
+		//ManageNewsPage newsPage = new ManageNewsPage(driver);
+		manageNewsPage.clickOnSearchButtonOnManageNews();
 		String news = ExcelUtility.getStringData(0, 0, "ManageNewsPage");
-		newsPage.enterTheNewsToSearch(news);
-		newsPage.searchButtonClickToSearchNews();
+		manageNewsPage.enterTheNewsToSearchOnManageNews(news).searchButtonClickToSearchNewsOnManageNews();
 		String expected = ExcelUtility.getStringData(0, 0, "ManageNewsPage");
-		String actual = newsPage.newsDisplayedList();
+		String actual = manageNewsPage.newsDisplayedList();
 		Assert.assertEquals(actual, expected, Constants.SEARCHNEWSERROR);
 	}
 
@@ -58,14 +56,13 @@ public class ManageNewsTest extends Base {
 		String username = ExcelUtility.getStringData(0, 0, "loginPage");
 		String password = ExcelUtility.getStringData(0, 1, "loginPage");
 		LoginPage loginPage = new LoginPage(driver);
-		loginPage.enterUserNameOnUserNameField(username);
-		loginPage.enterPasswordOnPasswordField(password);
-		loginPage.signInButtonClick();
-		HomePage homePage = new HomePage(driver);
-		homePage.clickOnMoreInfoManageNewsLink();
-		ManageNewsPage newsPage = new ManageNewsPage(driver);
-		newsPage.resetButtonClick();
-		boolean newsResetListDisplayed = newsPage.isNewsResetListDisplayed();
+		loginPage.enterUserNameOnUserNameField(username).enterPasswordOnPasswordField(password);
+		homePage=loginPage.signInButtonClick();
+		//HomePage homePage = new HomePage(driver);
+		manageNewsPage=homePage.clickOnMoreInfoManageNewsLink();
+		//ManageNewsPage newsPage = new ManageNewsPage(driver);
+		manageNewsPage.resetButtonClickOnManageNews();
+		boolean newsResetListDisplayed = manageNewsPage.isNewsResetListDisplayed();
 		Assert.assertTrue(newsResetListDisplayed, Constants.NEWSLISTNOTRESETERROR);
 	}
 }

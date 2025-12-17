@@ -20,20 +20,24 @@ public class HomePage {
 	@FindBy(xpath="//p[text()='Manage News']/parent::div//following-sibling::a") WebElement moreInfoManageNewsLink;
 
 	
-	public void clickOnAdminIcon() {
+	public HomePage clickOnAdminIcon() {
 		admin.click();
+		return this;
 	}
 
-	public void clickOnLogoutIcon() {
+	public LoginPage clickOnLogoutIcon() {
 		
 		logoutButton.click();
+		return new LoginPage(driver);
 	}
 	
-	public void clickOnMoreInfoAdminUsersLink() {
+	public AdminUsersPage clickOnMoreInfoAdminUsersLink() {
 		moreInfoAdminUsersLink.click();
+		return new AdminUsersPage(driver);
 	}
 	
-	public void clickOnMoreInfoManageNewsLink() {
+	public ManageNewsPage clickOnMoreInfoManageNewsLink() {
 		moreInfoManageNewsLink.click();
+		return new ManageNewsPage(driver);
 	}
 }

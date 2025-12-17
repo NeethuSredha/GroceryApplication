@@ -24,32 +24,39 @@ public class ManageNewsPage {
 	@FindBy(xpath="//a[contains(text(),' Reset')]") WebElement resetLink;
 	@FindBy(xpath="//table[@class=\"table table-bordered table-hover table-sm\"]") WebElement resetDisplayedTab;
 	
-	public void clickOnNewButton() {
+	public ManageNewsPage clickOnNewButtonOnManageNews() {
 		newButton.click();
+		return new ManageNewsPage(driver);
 	}
 	
-	public void enterTheNewsInformation(String news) {
+	public ManageNewsPage enterTheNewsInformationOnManageNews(String news) {
 		newsTextBox.sendKeys(news);
+		return new ManageNewsPage(driver);
 	}
 	
-	public void clickOnSaveButton() {
+	public ManageNewsPage clickOnSaveButtonOnManageNews() {
 		saveButton.click();
+		return new ManageNewsPage(driver);
 	}
 	
-	public void clickOnSearchButton() {
+	public ManageNewsPage clickOnSearchButtonOnManageNews() {
 		searchButton.click();
+		return new ManageNewsPage(driver);
 	}
 
-	public void enterTheNewsToSearch(String news) {
+	public ManageNewsPage enterTheNewsToSearchOnManageNews(String news) {
 		newsTitlePlaceHolder.sendKeys(news);
+		return new ManageNewsPage(driver);
 	}
 	
-	public void searchButtonClickToSearchNews() {
+	public ManageNewsPage searchButtonClickToSearchNewsOnManageNews() {
 		buttonToSearchNews.click();
+		return new ManageNewsPage(driver);
 	}
 	
-	public void resetButtonClick() {
+	public ManageNewsPage resetButtonClickOnManageNews() {
 		resetLink.click();
+		return new ManageNewsPage(driver);
 	}
 	public boolean newsCreatedAlert() {
 		return newsCreatedSuccessAlert.isDisplayed();
