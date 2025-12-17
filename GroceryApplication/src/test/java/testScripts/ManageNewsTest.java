@@ -6,6 +6,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import automationCore.Base;
+import constant.Constants;
 import pages.HomePage;
 import pages.LoginPage;
 import pages.ManageNewsPage;
@@ -28,7 +29,7 @@ public class ManageNewsTest extends Base {
 		newsPage.enterTheNewsInformation(news);
 		newsPage.clickOnSaveButton();
 		boolean newsCreatedAlert = newsPage.newsCreatedAlert();
-		Assert.assertTrue(newsCreatedAlert, "unable to create new news information.");
+		Assert.assertTrue(newsCreatedAlert, Constants.ADDNEWNEWSERROR);
 
 	}
 
@@ -49,7 +50,7 @@ public class ManageNewsTest extends Base {
 		newsPage.searchButtonClickToSearchNews();
 		String expected = ExcelUtility.getStringData(0, 0, "ManageNewsPage");
 		String actual = newsPage.newsDisplayedList();
-		Assert.assertEquals(actual, expected, "Unable to search the news.");
+		Assert.assertEquals(actual, expected, Constants.SEARCHNEWSERROR);
 	}
 
 	@Test(description = "verify whether news list can be reset.")
@@ -65,6 +66,6 @@ public class ManageNewsTest extends Base {
 		ManageNewsPage newsPage = new ManageNewsPage(driver);
 		newsPage.resetButtonClick();
 		boolean newsResetListDisplayed = newsPage.isNewsResetListDisplayed();
-		Assert.assertTrue(newsResetListDisplayed, "News list is not reset.");
+		Assert.assertTrue(newsResetListDisplayed, Constants.NEWSLISTNOTRESETERROR);
 	}
 }

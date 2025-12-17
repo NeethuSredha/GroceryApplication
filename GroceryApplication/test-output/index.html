@@ -92,7 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">3 methods, 1 failed,  2 skipped,  </span>
+                    <span class="method-stats">4 methods, 1 failed,  2 skipped,  1 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -103,7 +103,7 @@
                     <div class="method-list-content failed suite-Suite">
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="testScripts.HomeTest" class="method navigator-link" hash-for-method="verifyWhetherUserIsAbleToLogOutSuccessfully">verifyWhetherUserIsAbleToLogOutSuccessfully</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="testScripts.HomeTest" class="method navigator-link" hash-for-method="verifyWhetherUserIsAbleToLogOutSuccessfully(admin, admin123)">verifyWhetherUserIsAbleToLogOutSuccessfully(admin, admin123)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Suite -->
@@ -117,15 +117,29 @@
                     <div class="method-list-content skipped suite-Suite">
                       <span>
                         <img src="skipped.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="testScripts.HomeTest" class="method navigator-link" hash-for-method="verifyWhetherUserIsAbleToLogOutSuccessfully">verifyWhetherUserIsAbleToLogOutSuccessfully</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="testScripts.HomeTest" class="method navigator-link" hash-for-method="verifyWhetherUserIsAbleToLogOutSuccessfully(admin, admin123)">verifyWhetherUserIsAbleToLogOutSuccessfully(admin, admin123)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="skipped.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="testScripts.HomeTest" class="method navigator-link" hash-for-method="verifyWhetherUserIsAbleToLogOutSuccessfully">verifyWhetherUserIsAbleToLogOutSuccessfully</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="testScripts.HomeTest" class="method navigator-link" hash-for-method="verifyWhetherUserIsAbleToLogOutSuccessfully(admin, admin123)">verifyWhetherUserIsAbleToLogOutSuccessfully(admin, admin123)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content skipped suite-Suite -->
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods passed suite-Suite"> (hide)</a> <!-- hide-methods passed suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods passed suite-Suite"> (show)</a> <!-- show-methods passed suite-Suite -->
+                    </span>
+                    <div class="method-list-content passed suite-Suite">
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="testScripts.HomeTest" class="method navigator-link" hash-for-method="verifyWhetherUserIsAbleToLogOutSuccessfully(admin, admin)">verifyWhetherUserIsAbleToLogOutSuccessfully(admin, admin)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-Suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -145,14 +159,37 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="verifyWhetherUserIsAbleToLogOutSuccessfully">
-                  </a> <!-- verifyWhetherUserIsAbleToLogOutSuccessfully -->
+                  <a name="verifyWhetherUserIsAbleToLogOutSuccessfully(admin, admin123)">
+                  </a> <!-- verifyWhetherUserIsAbleToLogOutSuccessfully(admin, admin123) -->
                   <span class="method-name">verifyWhetherUserIsAbleToLogOutSuccessfully</span>
-                  <div class="stack-trace">java.lang.NullPointerException: Cannot invoke &quot;org.apache.poi.xssf.usermodel.XSSFRow.getCell(int)&quot; because &quot;r&quot; is null
-	at utilities.ExcelUtility.getStringData(ExcelUtility.java:21)
-	at testScripts.HomeTest.verifyWhetherUserIsAbleToLogOutSuccessfully(HomeTest.java:14)
+                  <span class="parameters">(admin,admin123)</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//img[contains(@src,&apos;avatar5.png&apos;)]&quot;}
+  (Session info: chrome=143.0.7499.41)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.34.0&apos;, revision: &apos;707dcb4246*&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.8&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [3b92b1c2933106484e96180d4d046e70, findElement {value=//img[contains(@src,&apos;avatar5.png&apos;)], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.41, chrome: {chromedriverVersion: 143.0.7499.146 (c1224fc40c9..., userDataDir: C:\Users\Lenovo\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60276}, goog:processID: 25920, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60276/devtoo..., se:cdpVersion: 143.0.7499.41, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 3b92b1c2933106484e96180d4d046e70
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:367)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:361)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy16.click(Unknown Source)
+	at pages.HomePage.clickOnAdminIcon(HomePage.java:24)
+	at testScripts.HomeTest.verifyWhetherUserIsAbleToLogOutSuccessfully(HomeTest.java:23)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 25 stack frames
+... Removed 28 stack frames
 </div> <!-- stack-trace -->
                   <em>
 (verify user logs out successfull.)                  </em>
@@ -168,14 +205,37 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="verifyWhetherUserIsAbleToLogOutSuccessfully">
-                  </a> <!-- verifyWhetherUserIsAbleToLogOutSuccessfully -->
+                  <a name="verifyWhetherUserIsAbleToLogOutSuccessfully(admin, admin123)">
+                  </a> <!-- verifyWhetherUserIsAbleToLogOutSuccessfully(admin, admin123) -->
                   <span class="method-name">verifyWhetherUserIsAbleToLogOutSuccessfully</span>
-                  <div class="stack-trace">java.lang.NullPointerException: Cannot invoke &quot;org.apache.poi.xssf.usermodel.XSSFRow.getCell(int)&quot; because &quot;r&quot; is null
-	at utilities.ExcelUtility.getStringData(ExcelUtility.java:21)
-	at testScripts.HomeTest.verifyWhetherUserIsAbleToLogOutSuccessfully(HomeTest.java:14)
+                  <span class="parameters">(admin,admin123)</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//img[contains(@src,&apos;avatar5.png&apos;)]&quot;}
+  (Session info: chrome=143.0.7499.41)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.34.0&apos;, revision: &apos;707dcb4246*&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.8&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [f53a561838e5abf975eadaae33a18786, findElement {value=//img[contains(@src,&apos;avatar5.png&apos;)], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.41, chrome: {chromedriverVersion: 143.0.7499.146 (c1224fc40c9..., userDataDir: C:\Users\Lenovo\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60218}, goog:processID: 27984, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60218/devtoo..., se:cdpVersion: 143.0.7499.41, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: f53a561838e5abf975eadaae33a18786
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:367)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:361)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy16.click(Unknown Source)
+	at pages.HomePage.clickOnAdminIcon(HomePage.java:24)
+	at testScripts.HomeTest.verifyWhetherUserIsAbleToLogOutSuccessfully(HomeTest.java:23)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 25 stack frames
+... Removed 28 stack frames
 </div> <!-- stack-trace -->
                   <em>
 (verify user logs out successfull.)                  </em>
@@ -183,14 +243,37 @@
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="verifyWhetherUserIsAbleToLogOutSuccessfully">
-                  </a> <!-- verifyWhetherUserIsAbleToLogOutSuccessfully -->
+                  <a name="verifyWhetherUserIsAbleToLogOutSuccessfully(admin, admin123)">
+                  </a> <!-- verifyWhetherUserIsAbleToLogOutSuccessfully(admin, admin123) -->
                   <span class="method-name">verifyWhetherUserIsAbleToLogOutSuccessfully</span>
-                  <div class="stack-trace">java.lang.NullPointerException: Cannot invoke &quot;org.apache.poi.xssf.usermodel.XSSFRow.getCell(int)&quot; because &quot;r&quot; is null
-	at utilities.ExcelUtility.getStringData(ExcelUtility.java:21)
-	at testScripts.HomeTest.verifyWhetherUserIsAbleToLogOutSuccessfully(HomeTest.java:14)
+                  <span class="parameters">(admin,admin123)</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//img[contains(@src,&apos;avatar5.png&apos;)]&quot;}
+  (Session info: chrome=143.0.7499.41)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.34.0&apos;, revision: &apos;707dcb4246*&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.8&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [1849851aa67f52eaaead0b2538878b41, findElement {value=//img[contains(@src,&apos;avatar5.png&apos;)], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.41, chrome: {chromedriverVersion: 143.0.7499.146 (c1224fc40c9..., userDataDir: C:\Users\Lenovo\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60250}, goog:processID: 4472, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60250/devtoo..., se:cdpVersion: 143.0.7499.41, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 1849851aa67f52eaaead0b2538878b41
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:367)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:361)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy16.click(Unknown Source)
+	at pages.HomePage.clickOnAdminIcon(HomePage.java:24)
+	at testScripts.HomeTest.verifyWhetherUserIsAbleToLogOutSuccessfully(HomeTest.java:23)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 25 stack frames
+... Removed 28 stack frames
 </div> <!-- stack-trace -->
                   <em>
 (verify user logs out successfull.)                  </em>
@@ -198,6 +281,24 @@
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Suite-class-skipped -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testScripts.HomeTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyWhetherUserIsAbleToLogOutSuccessfully(admin, admin)">
+                  </a> <!-- verifyWhetherUserIsAbleToLogOutSuccessfully(admin, admin) -->
+                  <span class="method-name">verifyWhetherUserIsAbleToLogOutSuccessfully</span>
+                  <span class="parameters">(admin,admin)</span>
+                  <em>
+(verify user logs out successfull.)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -254,24 +355,28 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(3);
+data.addRows(4);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'verifyWhetherUserIsAbleToLogOutSuccessfully')
 data.setCell(0, 2, 'testScripts.HomeTest')
-data.setCell(0, 3, 1018);
+data.setCell(0, 3, 7385);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'verifyWhetherUserIsAbleToLogOutSuccessfully')
 data.setCell(1, 2, 'testScripts.HomeTest')
-data.setCell(1, 3, 148);
+data.setCell(1, 3, 6334);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'verifyWhetherUserIsAbleToLogOutSuccessfully')
 data.setCell(2, 2, 'testScripts.HomeTest')
-data.setCell(2, 3, 89);
+data.setCell(2, 3, 6001);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'verifyWhetherUserIsAbleToLogOutSuccessfully')
+data.setCell(3, 2, 'testScripts.HomeTest')
+data.setCell(3, 3, 3158);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 seconds</span>
+              <span class="suite-total-time">Total running time: 22 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -303,38 +408,50 @@ return data;
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">verifyWhetherUserIsAbleToLogOutSuccessfully</span>
-                <span class="method-start">6861 ms</span>
+                <span class="method-name">verifyWhetherUserIsAbleToLogOutSuccessfully(admin, admin123)</span>
+                <span class="method-start">10764 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">driverQuit([TestResult name=verifyWhetherUserIsAbleToLogOutSuccessfully status=SKIP method=HomeTest.verifyWheth...)</span>
-                <span class="method-start">7902 ms</span>
+                <span class="method-start">16989 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">initializeBrowser(chrome)</span>
-                <span class="method-start">7932 ms</span>
+                <span class="method-start">16997 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">verifyWhetherUserIsAbleToLogOutSuccessfully</span>
-                <span class="method-start">10784 ms</span>
+                <span class="method-name">verifyWhetherUserIsAbleToLogOutSuccessfully(admin, admin123)</span>
+                <span class="method-start">21974 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">driverQuit([TestResult name=verifyWhetherUserIsAbleToLogOutSuccessfully status=SKIP method=HomeTest.verifyWheth...)</span>
-                <span class="method-start">10880 ms</span>
+                <span class="method-start">28315 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">initializeBrowser(chrome)</span>
-                <span class="method-start">10884 ms</span>
+                <span class="method-start">28317 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">verifyWhetherUserIsAbleToLogOutSuccessfully</span>
-                <span class="method-start">14853 ms</span>
+                <span class="method-name">verifyWhetherUserIsAbleToLogOutSuccessfully(admin, admin123)</span>
+                <span class="method-start">32565 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">driverQuit([TestResult name=verifyWhetherUserIsAbleToLogOutSuccessfully status=FAILURE method=HomeTest.verifyWh...)</span>
-                <span class="method-start">15024 ms</span>
+                <span class="method-start">40140 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">initializeBrowser(chrome)</span>
+                <span class="method-start">42820 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyWhetherUserIsAbleToLogOutSuccessfully(admin, admin)</span>
+                <span class="method-start">48246 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">driverQuit([TestResult name=verifyWhetherUserIsAbleToLogOutSuccessfully status=SUCCESS method=HomeTest.verifyWh...)</span>
+                <span class="method-start">51408 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
