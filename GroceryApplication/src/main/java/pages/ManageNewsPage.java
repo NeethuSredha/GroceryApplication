@@ -7,9 +7,9 @@ import org.openqa.selenium.support.PageFactory;
 
 public class ManageNewsPage {
 	public WebDriver driver;
-	
+
 	public ManageNewsPage(WebDriver driver) {
-		this.driver=driver;
+		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
 	
@@ -28,17 +28,17 @@ public class ManageNewsPage {
 		newButton.click();
 		return new ManageNewsPage(driver);
 	}
-	
+
 	public ManageNewsPage enterTheNewsInformationOnManageNews(String news) {
 		newsTextBox.sendKeys(news);
 		return new ManageNewsPage(driver);
 	}
-	
+
 	public ManageNewsPage clickOnSaveButtonOnManageNews() {
 		saveButton.click();
 		return new ManageNewsPage(driver);
 	}
-	
+
 	public ManageNewsPage clickOnSearchButtonOnManageNews() {
 		searchButton.click();
 		return new ManageNewsPage(driver);
@@ -48,26 +48,27 @@ public class ManageNewsPage {
 		newsTitlePlaceHolder.sendKeys(news);
 		return new ManageNewsPage(driver);
 	}
-	
+
 	public ManageNewsPage searchButtonClickToSearchNewsOnManageNews() {
 		buttonToSearchNews.click();
 		return new ManageNewsPage(driver);
 	}
-	
+
 	public ManageNewsPage resetButtonClickOnManageNews() {
 		resetLink.click();
 		return new ManageNewsPage(driver);
 	}
+
 	public boolean newsCreatedAlert() {
 		return newsCreatedSuccessAlert.isDisplayed();
 	}
-	
+
 	public String newsDisplayedList() {
 		return newsDisplayedList.getText();
 	}
-	
+
 	public boolean isNewsResetListDisplayed() {
 		return resetDisplayedTab.isDisplayed();
 	}
-	
+
 }

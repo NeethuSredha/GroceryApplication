@@ -5,9 +5,11 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import utilities.WaitUtility;
 
 public class HomePage {
 	public WebDriver driver;
+	WaitUtility waitUtility=new WaitUtility();
 
 	public HomePage(WebDriver driver) {
 		this.driver = driver;
@@ -26,16 +28,16 @@ public class HomePage {
 	}
 
 	public LoginPage clickOnLogoutIcon() {
-		
+		waitUtility.waitUntilElementToBeClickable(driver,logoutButton);
 		logoutButton.click();
 		return new LoginPage(driver);
 	}
-	
+
 	public AdminUsersPage clickOnMoreInfoAdminUsersLink() {
 		moreInfoAdminUsersLink.click();
 		return new AdminUsersPage(driver);
 	}
-	
+
 	public ManageNewsPage clickOnMoreInfoManageNewsLink() {
 		moreInfoManageNewsLink.click();
 		return new ManageNewsPage(driver);

@@ -4,10 +4,12 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.Select;
+
+import utilities.PageUtility;
 
 public class AdminUsersPage {
 	public WebDriver driver;
+	PageUtility pageUtility = new PageUtility();
 
 	public AdminUsersPage(WebDriver driver) {
 		this.driver = driver;
@@ -31,57 +33,57 @@ public class AdminUsersPage {
 		newLink.click();
 		return new AdminUsersPage(driver);
 	}
-	
+
 	public AdminUsersPage enterUserNameOnUserNameFieldOnAdmin(String newUserNameValue) {
 		userName.sendKeys(newUserNameValue);
 		return new AdminUsersPage(driver);
 	}
-	
+
 	public AdminUsersPage enterPasswordOnPasswordFieldOnAdmin(String newPasswordValue) {
 		password.sendKeys(newPasswordValue);
 		return new AdminUsersPage(driver);
 	}
-	
+
 	public AdminUsersPage selectTheUserTypeOnAdmin(String userTypeValue) {
-		Select select=new Select(userType);
-		select.selectByVisibleText(userTypeValue);
+		pageUtility.selectDropDownWithVisibleText(userType, userTypeValue);
 		return new AdminUsersPage(driver);
 	}
+
 	public AdminUsersPage saveButtonClickOnAdmin() {
 		saveButton.click();
 		return new AdminUsersPage(driver);
 	}
-	
+
 	public AdminUsersPage searchButtonClickOnAdmin() {
 		searchLink.click();
 		return new AdminUsersPage(driver);
 	}
-	
+
 	public AdminUsersPage enterTheUserNameToSearchOnAdmin(String userNameValue) {
 		searchUserName.sendKeys(userNameValue);
 		return new AdminUsersPage(driver);
 	}
-	
+
 	public AdminUsersPage searchButtonClickToCheckUserNameOnAdmin() {
 		searchButton.click();
 		return new AdminUsersPage(driver);
 	}
-	
+
 	public AdminUsersPage resetButtonClickOnAdmin() {
 		resetLink.click();
 		return new AdminUsersPage(driver);
 	}
-	
+
 	public boolean userAddedAlertMessage() {
 		return userAddAlert.isDisplayed();
 	}
-	
+
 	public boolean isSearchAdminUsersResultTabDisplayed() {
 		return searchAdminUsersResultTab.isDisplayed();
 	}
-	
+
 	public boolean isAdminUsersListDisplayed() {
 		return adminUsersList.isDisplayed();
 	}
-	
+
 }

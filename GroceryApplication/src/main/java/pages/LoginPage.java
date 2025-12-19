@@ -9,9 +9,9 @@ public class LoginPage {
 	public WebDriver driver;
 
 	public LoginPage(WebDriver driver) {
-		this.driver=driver;
+		this.driver = driver;
 		PageFactory.initElements(driver, this);
-	    }
+	}
 	@FindBy(xpath="//input[@name='username']") WebElement userName;
 	@FindBy(xpath="//input[@name='password']") WebElement password;
 	@FindBy(xpath="//button[text()='Sign In']") WebElement signIn;
@@ -20,37 +20,35 @@ public class LoginPage {
 	@FindBy(xpath="//p[text()='Sign in to start your session']") WebElement loginBoxMessage;
 	@FindBy(id="login-form") WebElement loginForm;
 	
-	
-	
-	
-	public LoginPage enterUserNameOnUserNameField(String userNameValue) {
+	public LoginPage enterUserNameOnUserNameFieldOnLogin(String userNameValue) {
 		userName.sendKeys(userNameValue);
 		return this;
 	}
-	public LoginPage enterPasswordOnPasswordField(String passwordValue) {
+
+	public LoginPage enterPasswordOnPasswordFieldOnLogin(String passwordValue) {
 		password.sendKeys(passwordValue);
 		return this;
 	}
 
-	public HomePage signInButtonClick() {
+	public HomePage signInButtonClickOnLogin() {
 		signIn.click();
 		return new HomePage(driver);
 	}
-	
+
 	public boolean isDashboardDisplayed() {
 		return dashboard.isDisplayed();
 	}
-	
-	public String getTheTitle() {
+
+	public String getTheTitleOnLogin() {
 		return title.getText();
 	}
-	
+
 	public String getTheLoginBoxMessage() {
 		return loginBoxMessage.getText();
 	}
-	
+
 	public boolean isLoginFormDisplayed() {
 		return loginForm.isDisplayed();
 	}
-	
+
 }

@@ -15,7 +15,7 @@ public class PageUtility {
 		Select object = new Select(element);
 		object.selectByVisibleText(visibleText);
 	}
-	
+
 	public void selectDropDownWithIndex(WebElement element, int index) {
 		Select object = new Select(element);
 		object.selectByIndex(index);

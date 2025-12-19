@@ -20,7 +20,7 @@ public class FakerUtility {
 	public String createRandomFullName() {
 		return faker.name().fullName();
 	}
-	
+
 	public String createRandomAddress() {
 		return faker.address().fullAddress();
 	}
