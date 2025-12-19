@@ -21,18 +21,9 @@ public class PageUtility {
 		object.selectByIndex(index);
 	}
 
-	public void selectTheCheckBox(WebElement element) {
-		element.click();
-	}
-
-	public void selectTheRadioButton(WebElement element) {
-		element.click();
-	}
-
 	public void rightClick(WebElement element, WebDriver driver) {
 		Actions action = new Actions(driver);
 		action.contextClick(element).build().perform();
-
 	}
 
 	public void mouseHover(WebElement element, WebDriver driver) {
